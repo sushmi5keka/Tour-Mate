@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.trips:
                         fragment(new TripsFragment());
-                        setTitle("Trips");
+                        setTitle("Trip");
                         return true;
                     case R.id.map:
                         fragment(new MapFragment());

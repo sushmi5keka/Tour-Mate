@@ -6,25 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
-<!--    <android.support.v7.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:backgroundTint="#ffffff"-->
-<!--        app:layout_scrollFlags="scroll|enterAlways"-->
-<!--        app:popupTheme="@style/AppTheme.PopupOverlay"-->
-<!--        app:theme="@style/ToolbarIconColor"-->
-<!--        app:title="@string/app_name"-->
-<!--        app:titleTextAppearance="@style/toolbarText"-->
-<!--        app:titleTextColor="#000000"-->
 
-<!--        />-->
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="@color/lightGreen"-->
-<!--        android:id="@+id/toolbar"/>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -44,7 +26,7 @@
         android:id="@+id/fragmentView"
         android:layout_above="@id/navBar"
         android:background="@color/lightAsh"
-        android:layout_below="@+id/toolbar"
+
         >
 
     </FrameLayout>
