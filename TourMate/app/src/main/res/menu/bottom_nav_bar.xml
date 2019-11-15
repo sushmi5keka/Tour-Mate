@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_rectangles_grid"
+       />
+
+    <item
+        android:id="@+id/trips"
+        android:title="Trips"
+        android:icon="@drawable/ic_earth_pictures"
+        />
+
+    <item
+        android:id="@+id/map"
+        android:title="Map"
+        android:icon="@drawable/ic_earth_globe_with_continents_maps"
+       />
+</menu>

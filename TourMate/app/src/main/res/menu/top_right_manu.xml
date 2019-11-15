@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <item
+       android:id="@+id/menu"
+       android:title="Menu"
+       app:showAsAction="always"
+       android:icon="@drawable/ic_more_vert_black_24dp"
+       >
+<menu>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_black_24dp"
+       />
+
+    <item
+        android:id="@+id/logout"
+        android:title="Log Out"
+android:icon="@drawable/ic_logout"
+        />
+
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        />
+
+</menu>
+   </item>
+</menu>
