@@ -52,14 +52,16 @@
                         android:layout_weight="0.5"
                         android:layout_height="wrap_content"
                         android:hint="First Name"
-                        android:id="@+id/firstNameEt"/>
+                        android:id="@+id/firstNameEt"
+                        android:theme="@style/PinkTheme"/>
 
                     <EditText
                         android:layout_width="0dp"
                         android:layout_weight="0.5"
                         android:layout_height="wrap_content"
                         android:hint="Last Name"
-                        android:id="@+id/lastNameEt"/>
+                        android:id="@+id/lastNameEt"
+                        android:theme="@style/PinkTheme"/>
 
                 </LinearLayout>
 
@@ -68,21 +70,24 @@
                     android:layout_height="wrap_content"
                     android:hint="Email Address"
                     android:id="@+id/emailEt"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:theme="@style/PinkTheme"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
                     android:id="@+id/passwordSEt"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:theme="@style/PinkTheme"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Confirm Password"
                     android:id="@+id/confirmPasswordSEt"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:theme="@style/PinkTheme"/>
 
 <!--                <EditText-->
 <!--                    android:layout_width="match_parent"-->
@@ -108,6 +113,7 @@
                     android:visibility="gone"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
+                    android:theme="@style/PinkTheme"
                     />
 
             </LinearLayout>

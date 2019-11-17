@@ -8,16 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+<style name="PinkTheme">
+    <item name="colorAccent">@color/colorProgressBar</item>
+</style>
 
-<!--    <style name="ToolbarIconColor" parent="AppTheme">-->
-<!--        <item name="android:textColorSecondary">#000000</item>-->
-<!--    </style>-->
-
-<!--    <style name="toolbarText">-->
-<!--        <item name="android:textSize">22sp</item>-->
-<!--        <item name="android:textStyle">bold</item>-->
-<!--        <item name="android:textAllCaps">false</item>-->
-<!--    </style>-->
 
 </resources>
