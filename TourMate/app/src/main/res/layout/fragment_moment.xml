@@ -4,11 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.MomentFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/firstpart"
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/momentRecyclerView"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:layout_marginTop="10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="moments" />
+        android:layout_below="@id/firstpart"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
 
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addMementFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/lightOrange"
+        android:src="@drawable/ic_add_circle_black_24dp" />
+
+</RelativeLayout>
 </FrameLayout>

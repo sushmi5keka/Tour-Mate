@@ -47,8 +47,8 @@ public class ExpenseFragment extends Fragment {
                final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 View view1 = getLayoutInflater().inflate(R.layout.add_expence_alertdialog, null);
 
-                final EditText expenseNameEt = view.findViewById(R.id.expenseNameEt);
-                final EditText expenseAmount = view.findViewById(R.id.expenseAmountEt);
+                final EditText expenseNameEt = view1.findViewById(R.id.expenseNameEt);
+                final EditText expenseAmount = view1.findViewById(R.id.expenseAmountEt);
                 Button addBtn = view1.findViewById(R.id.addBtn);
                 Button cancleBtn = view1.findViewById(R.id.cancelBtn);
 
