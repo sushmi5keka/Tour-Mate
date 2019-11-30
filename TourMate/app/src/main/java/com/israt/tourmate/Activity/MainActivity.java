@@ -19,8 +19,9 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.israt.tourmate.Fragment.DashboardFragment;
-import com.israt.tourmate.Fragment.MapFragment;
+import com.israt.tourmate.Fragment.MomentFragment;
 import com.israt.tourmate.Fragment.TripsFragment;
+import com.israt.tourmate.MapAction.MapsActivity;
 import com.israt.tourmate.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
                         fragment(new TripsFragment());
                         setTitle("Trip");
                         return true;
-                    case R.id.map:
-                        fragment(new MapFragment());
-                        setTitle("Map");
+                    case R.id.moment:
+                        fragment(new MomentFragment());
+                        setTitle("Moment");
                         return true;
                 }
 
@@ -92,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
+            case R.id.nearBy:
+                startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                break;
             case R.id.profile:
                 Toast.makeText(this, "Help", Toast.LENGTH_LONG).show();
                 break;

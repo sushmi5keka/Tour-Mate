@@ -53,6 +53,7 @@
                     android:layout_margin="5dp"
                     android:drawableLeft="@drawable/ic_email_black_24dp"
                     android:drawablePadding="5dp"
+                    android:inputType="textEmailAddress"
                     android:hint="Email"
                     android:theme="@style/PinkTheme"
                     />
