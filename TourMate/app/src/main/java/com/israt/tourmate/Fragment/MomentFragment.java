@@ -147,15 +147,18 @@ public class MomentFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//      Trip trip = new Trip();
-//       String tripId = trip.getTripId();
+        Bundle bundle=getArguments();
+        final String  tripId = bundle.getString("tripId");
         String userId = firebaseAuth.getCurrentUser().getUid();
         momentRef = FirebaseDatabase.getInstance()
                 .getReference()
 //                .child("Trips")
 //                .child(StaticData.tripsID)
+
                 .child("user")
                 .child(userId)
+                .child("Trips")
+                .child(tripId)
                 .child("Moments");
         momentRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -198,7 +201,7 @@ public class MomentFragment extends Fragment {
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(getActivity(),
-                        "com.israt.multipulimageinfirebase",
+                        "com.israt.tourmate",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
@@ -300,6 +303,8 @@ public class MomentFragment extends Fragment {
                 progressDialog.dismiss();
 //                String username = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
                 String userId = firebaseAuth.getCurrentUser().getUid();
+                Bundle bundle=getArguments();
+                final String  tripId = bundle.getString("tripId");
                 DatabaseReference ref  = FirebaseDatabase
                         .getInstance()
                         .getReference()
@@ -307,6 +312,8 @@ public class MomentFragment extends Fragment {
 //                        .child(StaticData.tripsID)
                         .child("user")
                         .child(userId)
+                        .child("Trips")
+                        .child(tripId)
                         .child("Moments");
                 DatabaseReference keyref= ref.push();
                 String key = keyref.getKey();

@@ -20,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.israt.tourmate.Fragment.DashboardFragment;
 import com.israt.tourmate.Fragment.MomentFragment;
+import com.israt.tourmate.Fragment.ProfileFragment;
 import com.israt.tourmate.Fragment.TripsFragment;
 import com.israt.tourmate.MapAction.MapsActivity;
 import com.israt.tourmate.R;
@@ -56,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
                         fragment(new TripsFragment());
                         setTitle("Trip");
                         return true;
-                    case R.id.moment:
-                        fragment(new MomentFragment());
-                        setTitle("Moment");
+                    case R.id.profile:
+                        fragment(new ProfileFragment());
+                        setTitle("User Profile");
                         return true;
                 }
 
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nearBy:
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
                 break;
-            case R.id.profile:
+            case R.id.weather:
                 Toast.makeText(this, "Help", Toast.LENGTH_LONG).show();
                 break;
             case R.id.logout:

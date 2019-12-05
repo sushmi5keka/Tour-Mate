@@ -15,9 +15,9 @@
                 android:title="Nearby places" />
 
             <item
-                android:id="@+id/profile"
+                android:id="@+id/weather"
                 android:icon="@drawable/ic_person_black_24dp"
-                android:title="Profile" />
+                android:title="Weather" />
 
             <item
                 android:id="@+id/logout"

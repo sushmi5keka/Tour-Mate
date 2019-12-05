@@ -96,7 +96,7 @@
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclearViewlist"
+                android:id="@+id/recyclearViewExpenseList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
@@ -126,7 +126,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/lightOrange"
+            android:backgroundTint="@color/lightGreen"
             android:src="@drawable/ic_add_circle_black_24dp" />
 
     </RelativeLayout>

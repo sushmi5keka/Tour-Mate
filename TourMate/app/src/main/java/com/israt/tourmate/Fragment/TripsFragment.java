@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -98,8 +100,12 @@ public class TripsFragment extends Fragment {
         addTourLL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TripsActivity.class);
-                startActivity(intent);
+                InfomationFragment infomationFragment=new InfomationFragment();
+                FragmentManager manager=getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = manager.beginTransaction();
+                ft.replace(R.id.fragmentView,infomationFragment);
+                ft.addToBackStack(null);
+                ft.commit();
             }
         });
 

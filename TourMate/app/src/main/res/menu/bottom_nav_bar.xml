@@ -13,8 +13,8 @@
         />
 
     <item
-        android:id="@+id/moment"
-        android:title="Moment"
-        android:icon="@drawable/ic_image"
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_black_24dp"
        />
 </menu>

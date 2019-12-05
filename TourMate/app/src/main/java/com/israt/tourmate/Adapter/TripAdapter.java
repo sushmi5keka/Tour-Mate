@@ -22,9 +22,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.israt.tourmate.Fragment.ExpenseFragment;
 import com.israt.tourmate.Fragment.InfomationFragment;
 import com.israt.tourmate.Fragment.InformationDetailsFragment;
 //import com.israt.tourmate.Fragment.TripInfoFragment;
+import com.israt.tourmate.Fragment.MomentFragment;
 import com.israt.tourmate.PojoClass.Trip;
 import com.israt.tourmate.R;
 
@@ -51,12 +53,12 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Trip trip=trips.get(position);
         holder.nameTv.setText(trip.getName());
-        holder.budgetTv.setText(trip.getBudget());
+//        holder.budgetTv.setText(trip.getBudget());
         holder.startTv.setText(trip.getStartD());
         holder.endTv.setText(trip.getEndD());
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.detailsTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Bundle bundle=new Bundle();
@@ -64,7 +66,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
 
                 bundle.putString("name",trip.getName());
                 bundle.putString("location", trip.getLocation());
-                bundle.putString("budget",trip.getBudget());
+//                bundle.putString("budget",trip.getBudget());
                 bundle.putString("startD",trip.getStartD() );
 
                 bundle.putString("endD",trip.getEndD());
@@ -80,6 +82,41 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
             }
         });
 
+        holder.expenseTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ExpenseFragment expenseFragment=new ExpenseFragment();
+                Bundle bundle=new Bundle();
+
+
+                bundle.putString("tripId",trip.getTripId());
+
+
+                expenseFragment.setArguments(bundle);
+                AppCompatActivity  activity=(AppCompatActivity) getView.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentView,expenseFragment).addToBackStack(null).commit();
+
+
+            }
+        });
+
+        holder.momentTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MomentFragment momentFragment=new MomentFragment();
+                Bundle bundle=new Bundle();
+
+
+                bundle.putString("tripId",trip.getTripId());
+
+
+                momentFragment.setArguments(bundle);
+                AppCompatActivity  activity=(AppCompatActivity) getView.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentView,momentFragment).addToBackStack(null).commit();
+
+
+            }
+        });
 
         holder.tripsDeleteIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,7 +209,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameTv,budgetTv,startTv,endTv;
+        private TextView nameTv,budgetTv,startTv,endTv,expenseTv,detailsTv,momentTV;
         private ImageView popupIV;
         private FirebaseAuth firebaseAuth;
         private DatabaseReference databaseReference;
@@ -181,9 +218,12 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
            nameTv=itemView.findViewById(R.id.tripNameTv) ;
-           budgetTv=itemView.findViewById(R.id.tripBudgetTv) ;
+//           budgetTv=itemView.findViewById(R.id.tripBudgetTv) ;
            startTv=itemView.findViewById(R.id.tripStartDateTv) ;
            endTv=itemView.findViewById(R.id.tripEndDateTv) ;
+            expenseTv = itemView.findViewById(R.id.expenseTV);
+            detailsTv = itemView.findViewById(R.id.detailsTV);
+            momentTV = itemView.findViewById(R.id.momentTV);
 //            popupIV=itemView.findViewById(R.id.popupIv);
             firebaseAuth = FirebaseAuth.getInstance();
             databaseReference = FirebaseDatabase.getInstance().getReference();
