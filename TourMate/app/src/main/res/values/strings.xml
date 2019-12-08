@@ -4,4 +4,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="appid">a0e0d52b2dbb8228d3f19466bb398fd0</string>
+    <string name="appid1">a0e0d52b2dbb8228d3f19466bb398fd0</string>
+    <string name="login"><u> Log in</u></string>
+
 </resources>

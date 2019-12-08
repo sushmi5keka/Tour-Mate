@@ -66,7 +66,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
 
                 bundle.putString("name",trip.getName());
                 bundle.putString("location", trip.getLocation());
-//                bundle.putString("budget",trip.getBudget());
+                bundle.putString("budget",trip.getBudget());
                 bundle.putString("startD",trip.getStartD() );
 
                 bundle.putString("endD",trip.getEndD());

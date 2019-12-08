@@ -117,7 +117,7 @@
                android:orientation="horizontal"
                android:weightSum="3"
                android:layout_marginTop="00dp"
-               android:background="@color/lightOrange"
+               android:background="@color/lightGreen"
                android:layout_height="wrap_content">
 
                <TextView

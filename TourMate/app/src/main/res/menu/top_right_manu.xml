@@ -16,7 +16,7 @@
 
             <item
                 android:id="@+id/weather"
-                android:icon="@drawable/ic_person_black_24dp"
+                android:icon="@drawable/ic_rain"
                 android:title="Weather" />
 
             <item

@@ -24,6 +24,7 @@ import com.israt.tourmate.Fragment.ProfileFragment;
 import com.israt.tourmate.Fragment.TripsFragment;
 import com.israt.tourmate.MapAction.MapsActivity;
 import com.israt.tourmate.R;
+import com.israt.tourmate.WeatherAction.WeatherActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
                 break;
             case R.id.weather:
-                Toast.makeText(this, "Help", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, WeatherActivity.class));
                 break;
             case R.id.logout:
                 firebaseAuth.signOut();

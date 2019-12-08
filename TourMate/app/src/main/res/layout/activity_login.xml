@@ -66,6 +66,7 @@
                     android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
                     android:drawablePadding="5dp"
                     android:hint="Password"
+                    android:inputType="textPassword"
                     android:theme="@style/PinkTheme"/>
 
                 <Button

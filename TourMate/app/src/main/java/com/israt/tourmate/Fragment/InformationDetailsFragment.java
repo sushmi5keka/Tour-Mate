@@ -33,7 +33,7 @@ public class InformationDetailsFragment extends Fragment {
 
         nameTv=view.findViewById(R.id.tripNameTv);
         locationTv=view.findViewById(R.id.tripLocationTv);
-//        budgetTv=view.findViewById(R.id.tripBudgetEt);
+        budgetTv=view.findViewById(R.id.tripBudgetTv);
         startTv=view.findViewById(R.id.tripStartDateTv);
         endTv=view.findViewById(R.id.tripEndDateTv);
 
@@ -43,13 +43,13 @@ public class InformationDetailsFragment extends Fragment {
 
         String tname = getArguments().getString("name");
         String tlocatiom = getArguments().getString("location");
-//        String tbudget = getArguments().getString("budget");
+        String tbudget = getArguments().getString("budget");
         String tstart = getArguments().getString("startD");
         String tend = getArguments().getString("endD");
 
         nameTv.setText(tname);
         locationTv.setText(tlocatiom);
-//        budgetTv.setText(tbudget);
+        budgetTv.setText(tbudget);
         startTv.setText(tstart);
         endTv.setText(tend);
 
