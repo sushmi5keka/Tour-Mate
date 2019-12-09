@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item-->
+    <!--        android:id="@+id/dashboard"-->
+    <!--        android:title="Dashboard"-->
+    <!--        android:icon="@drawable/ic_rectangles_grid"-->
+    <!--       />-->
+
+    <item
+        android:id="@+id/trips"
+        android:icon="@drawable/ic_earth_pictures"
+        android:title="Trips" />
+
+    <item
+        android:id="@+id/empty"
+        android:title=" " />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Profile" />
+</menu>
